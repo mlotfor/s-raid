@@ -9,7 +9,7 @@ logo='''
 ╚═════╝░░░░░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝╚═════╝░'''
 
 print(logo)
-print("===>Thank you MIZ for your Supports<===")
+print("===>Thank you MONIRUL ISLAM for your Support<===")
 time.sleep(5)
 os.system('clear')
 print(logo)
