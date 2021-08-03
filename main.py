@@ -7,12 +7,14 @@ logo='''
 ░╚═══██╗╚════╝██╔══██╗██╔══██║██║██║░░██║
 ██████╔╝░░░░░░██║░░██║██║░░██║██║██████╔╝
 ╚═════╝░░░░░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝╚═════╝░'''
+title = "=======>Super Fast SMS Bomber<======"
 
 print(logo)
 print("===>Thank you MONIRUL ISLAM for your Support<===")
 time.sleep(5)
 os.system('clear')
 print(logo)
+print(title)
 natnumber = str(input("Enter Target Number +880: "))
 
 number = "0"+natnumber
