@@ -5,7 +5,7 @@ SUPER-FAST SMS BOMBER
 * git clone https://github.com/mlotfor/s-raid
 * cd s-raid
 * python main.py
-* single command
+* single command :
   git clone https://github.com/mlotfor/s-raid && cd s-raid && python main.py
 
 * Enjoy !
