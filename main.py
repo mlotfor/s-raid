@@ -1,7 +1,18 @@
-import requests
+import requests,time,os
+logo='''
 
+░██████╗░░░░░░██████╗░░█████╗░██╗██████╗░
+██╔════╝░░░░░░██╔══██╗██╔══██╗██║██╔══██╗
+╚█████╗░█████╗██████╔╝███████║██║██║░░██║
+░╚═══██╗╚════╝██╔══██╗██╔══██║██║██║░░██║
+██████╔╝░░░░░░██║░░██║██║░░██║██║██████╔╝
+╚═════╝░░░░░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝╚═════╝░'''
+
+print(logo)
 print("===>Thank you MIZ for your Supports<===")
-
+time.sleep(5)
+os.system('clear')
+print(logo)
 natnumber = str(input("Enter Target Number +880: "))
 
 number = "0"+natnumber
